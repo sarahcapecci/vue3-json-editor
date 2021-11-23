@@ -1,6 +1,12 @@
 .DS_Store
 node_modules
-/dist
+# /dist
+/components
+/example_vite
+/public
+/src
+/tests
+
 
 
 # local env files

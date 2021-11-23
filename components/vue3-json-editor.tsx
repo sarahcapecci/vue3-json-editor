@@ -82,9 +82,10 @@ export const Vue3JsonEditor = defineComponent({
           expandAll()
         }
       }
-      const uid = getCurrentInstance().uid;
+      const uid = getCurrentInstance()!.uid;
+      const qSelector = '.jsoneditor-vue' + uid
       state.editor = new JsonEditor(
-        document.querySelector('.jsoneditor-vue' + uid),
+        document.querySelector(qSelector),
         options,
         state.json
       )
